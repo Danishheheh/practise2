@@ -3,21 +3,21 @@ import { motion } from 'framer-motion';
 import { Heart, Clock } from 'lucide-react';
 import GlassCard from './GlassCard';
 
-const INITIAL_BENCHMARK_MS = (589 * 86400 + 0 * 3600 + 12 * 60) * 1000;
+// Fixed real-time anchor timestamp in history (589 days, 00 hours, 12 minutes ago)
+const ANCHOR_START_MS = 1734821160000;
 
 function LoveStopwatch() {
-  const [elapsedMs, setElapsedMs] = useState(INITIAL_BENCHMARK_MS);
+  const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
-    const startTime = Date.now();
     const timer = setInterval(() => {
-      const diff = Date.now() - startTime;
-      setElapsedMs(INITIAL_BENCHMARK_MS + diff);
+      setNow(Date.now());
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
+  const elapsedMs = Math.max(0, now - ANCHOR_START_MS);
   const totalSeconds = Math.floor(elapsedMs / 1000);
   const days = Math.floor(totalSeconds / (3600 * 24));
   const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
@@ -122,7 +122,7 @@ export default function FooterSection() {
             />
           </motion.div>
 
-          {/* 4. Live Love Stopwatch Counter starting from 589 days, 00 hours, 12 mins */}
+          {/* 4. Real-time Love Stopwatch Counter */}
           <LoveStopwatch />
 
         </div>
