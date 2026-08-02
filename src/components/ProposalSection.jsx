@@ -74,7 +74,7 @@ export default function ProposalSection() {
               </h2>
 
               <p className="text-xs sm:text-sm text-slate-300 font-light max-w-md mx-auto mb-6 leading-relaxed">
-                You are my forever choice, my favorite adventure, and my entire world.
+                dhyan se sochke answer karna warna pata haina aapka kya haal hoga imao hehehe
               </p>
 
               {/* First Image (Cat with Rose in Mouth) */}
@@ -136,11 +136,11 @@ export default function ProposalSection() {
 
               {/* Cute Celebration Heading */}
               <h2 className="text-3xl sm:text-5xl font-serif text-white font-normal mb-4 tracking-wide">
-                i knew youd click on yess heheh! 💕✨
+                i knew youd click on yess heheh! 🤭💗💗💗💕✨
               </h2>
 
               <p className="text-sm sm:text-base text-porcelain-200 font-light max-w-xl mx-auto mb-8 leading-relaxed">
-                You just made me the happiest person in the entire world! Luckyyy to haveee heheh youu the god giftedd
+                You just made me the happiest person in the entire world! Luckyyy to haveee youuuu heheh youu the god giftedd
               </p>
 
               {/* 4 Celebration Pictures Side-by-Side (NO text captions below images) */}
